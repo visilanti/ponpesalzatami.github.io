@@ -97,7 +97,7 @@
                 </div>
 
                 <div class="footer-berita text-center">
-                    <a href="" class="btn btn-outline-danger">Berita Lainnya</a>
+                    <a href="/berita" class="btn btn-outline-danger">Berita Lainnya</a>
                 </div>
             </div>
         </section>
@@ -117,7 +117,7 @@
                         <button class="btn btn-outline-danger">Registrasi</button>
                     </div>
                     <div class="col-lg-6">
-                        <img src="{{ asset('Assets/icons/il-join.png') }}" class="foto img-fluid" alt="">
+                        <img src="{{ asset('Assets/images/img_4.png') }}" class="foto img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@
             <div class="container py-5">
                 <div class="text-center">
                     <!-- link i-frame -->
-                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/t8PmjzExJUE?si=qgdZeDBv65DuiC0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <iframe class="mainVideo" width="560" height="315" src="https://www.youtube.com/embed/t8PmjzExJUE?si=qgdZeDBv65DuiC0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -144,16 +144,17 @@
 
                 <div class="row py-5">
                     <div class="col-lg-4">
-                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/t8PmjzExJUE?si=qgdZeDBv65DuiC0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/G058jB7Umk0?si=aomoPM39TPPrKS7-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="col-lg-4">
                         <iframe width="100%" height="215" src="https://www.youtube.com/embed/t8PmjzExJUE?si=qgdZeDBv65DuiC0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="col-lg-4">
-                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/t8PmjzExJUE?si=qgdZeDBv65DuiC0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="100%" height="215" src="https://www.youtube.com/embed/_k7jgSn03FM?si=99bOdESjRt36CIC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_k7jgSn03FM?si=99bOdESjRt36CIC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="footer-berita text-center">
                     <a href="" class="btn btn-outline-danger">Video Lainnya</a>
                 </div>
@@ -175,16 +176,16 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-6">
-                        <img src="{{  asset('Assets/il-photo-01.png') }}" class="img-fluid" alt="">
+                        <img src="{{  asset('Assets/images/img_1.jpg') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
-                        <img src="{{  asset('Assets/il-photo-02.png') }}" class="img-fluid" alt="">
+                        <img src="{{  asset('Assets/images/img_2.jpg') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
-                        <img src="{{  asset('Assets/il-photo-03.png') }}" class="img-fluid" alt="">
+                        <img src="{{  asset('Assets/images/img_3.jpg') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
-                        <img src="{{  asset('Assets/il-photo-04.png') }}" class="img-fluid" alt="">
+                        <img src="{{  asset('Assets/images/img_1.jpg') }}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -192,18 +193,18 @@
         <!-- end foto -->
 
         <!-- fasilitas -->
-        <section id="fasilitas" class="py-5">
+        <!-- <section id="fasilitas" class="py-5">
             <div class="container py-5">
                 <div class="text-center">
                     <h3 class="fw-bold">Fasilitas Pesantren</h3>
                 </div>
-                <!-- edit fotonya! -->
+                
                 <img src="{{ asset('Assets/il-fasisilas.svg') }}" class="img-fluid py-5" alt="">
                 <div class="text-center">
                     <a href="" class="btn btn-outline-danger">Fasilitas Lainnya</a>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- end fasilitas -->
     @endsection
     

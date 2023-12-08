@@ -10,13 +10,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                    <a class="nav-link active" aria-current="page" href="/">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Berita</a>
+                    <a class="nav-link active" aria-current="page" href="/berita">Berita</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Prestasi</a>
@@ -28,10 +28,17 @@
                     <a class="nav-link active" aria-current="page" href="#">Kontak</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <button class="btn btn-danger" type="submit">Register</button>
-            </form>
+            <div class="d-flex">
+                @auth
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-dark">Logout</button>
+                    </form>
+                @else
+                    <button class="btn btn-danger">Register</button>
+                @endauth
             </div>
         </div>
-        </nav>
+    </div>
+</nav>
         <!-- end navbar -->

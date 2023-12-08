@@ -16,7 +16,7 @@
                                 <p class="mb-3 text-secondary">21/08/20203</p>
                                 <h4 class="fw-bold mb-3">Pengajian Bulanan Pesantren Al-Zatami</h4>
                                 <p class="text-secondary">pesantrenmodern</p>
-                                <a href="" class="text-decoration-none text-danger">Selengkapnya</a>
+                                <a href="/detail" class="text-decoration-none text-danger">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
@@ -38,14 +38,10 @@
                                 <p class="mb-3 text-secondary">21/08/20203</p>
                                 <h4 class="fw-bold mb-3">Pengajian Bulanan Pesantren Al-Zatami</h4>
                                 <p class="text-secondary">pesantrenmodern</p>
-                                <a href="" class="text-decoration-none text-danger">Selengkapnya</a>
+                                <a href="/detail" class="text-decoration-none text-danger">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="footer-berita text-center">
-                    <a href="" class="btn btn-outline-danger">Berita Lainnya</a>
                 </div>
             </div>
         </section>

@@ -112,7 +112,11 @@ body{
     background-position: center;
     height: 500px;
 }
-
+@media screen and (max-width: 600px){
+    .mainVideo{
+        width: 100%;
+    }
+}
 /* foto */
 /* paralax background */
 .section-foto{
