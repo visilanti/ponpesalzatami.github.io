@@ -10,7 +10,6 @@
             </div>
         </section>
         <!-- end hero -->
-
         <!-- program -->
         <section id="program" style="margin-top: -40px">
             <div class="container col-xxl-9">
@@ -61,39 +60,19 @@
                 </div>
 
                 <div class="row py-5">
+                    @foreach ($artikels as $item)
                     <div class="col-lg-4">
                         <div class="card border-0">
-                            <img src="{{ asset('Assets/images/img_1.jpg') }}" class="img-fluid mb-3" alt="">
+                            <img src="{{ asset('storage/artikel/' . $item -> image) }}" class="img-fluid mb-3" alt="">
                             <div class="konten-berita">
-                                <p class="mb-3 text-secondary">21/08/20203</p>
-                                <h4 class="fw-bold mb-3">Pengajian Bulanan Pesantren Al-Zatami</h4>
+                                <p class="mb-3 text-secondary">{{ $item->created_at}}</p>
+                                <h4 class="fw-bold mb-3">{{ $item->judul}}</h4>
                                 <p class="text-secondary">pesantrenmodern</p>
-                                <a href="" class="text-decoration-none text-danger">Selengkapnya</a>
+                                <a href="/detail/{{ $item->slug}}" class="text-decoration-none text-danger">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card border-0">
-                            <img src="{{ asset('Assets/images/img_2.jpg') }}" class="img-fluid mb-3" alt="">
-                            <div class="konten-berita">
-                                <p class="mb-3 text-secondary">21/08/20203</p>
-                                <h4 class="fw-bold mb-3">Pengajian Bulanan Pesantren Al-Zatami</h4>
-                                <p class="text-secondary">pesantrenmodern</p>
-                                <a href="" class="text-decoration-none text-danger">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card border-0">
-                            <img src="{{ asset('Assets/images/img_3.jpg') }}" class="img-fluid mb-3" alt="">
-                            <div class="konten-berita">
-                                <p class="mb-3 text-secondary">21/08/20203</p>
-                                <h4 class="fw-bold mb-3">Pengajian Bulanan Pesantren Al-Zatami</h4>
-                                <p class="text-secondary">pesantrenmodern</p>
-                                <a href="" class="text-decoration-none text-danger">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="footer-berita text-center">
@@ -113,8 +92,8 @@
                             <h5>Daftar Santri</h5>
                         </div>
                         <h1 class="fw-bold mb-2">Gabung bersama kami, mewujudkan generasi rabbani</h1>
-                        <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius facere laboriosam quos dolorum sint totam deserunt soluta ad, nobis quas! Quas, aperiam neque voluptates ullam doloremque ipsa minima nostrum aliquam.</p>
-                        <button class="btn btn-outline-danger">Registrasi</button>
+                        <p class="mb-3">Pondok Pesantren Al Zatami adalah lembaga pendidikan tinggi yang menyediakan lingkungan pembelajaran Islami bagi mahasiswa. Kami memiliki visi untuk menghasilkan generasi yang tidak hanya unggul dalam ilmu pengetahuan, tetapi juga memahami dan mengamalkan nilai-nilai keislaman.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeQVNDOvGZqJyG7GobFxn7FCR5cScsMHtXY-sQzOdleASMRg/viewform?usp=sf_link" class="btn btn-outline-danger">Registrasi</a>
                     </div>
                     <div class="col-lg-6">
                         <img src="{{ asset('Assets/images/img_4.png') }}" class="foto img-fluid" alt="">
@@ -153,11 +132,6 @@
                         <iframe width="100%" height="215" src="https://www.youtube.com/embed/_k7jgSn03FM?si=99bOdESjRt36CIC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/_k7jgSn03FM?si=99bOdESjRt36CIC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="footer-berita text-center">
-                    <a href="" class="btn btn-outline-danger">Video Lainnya</a>
-                </div>
             </div>
         </section>
         <!-- end video -->
@@ -176,16 +150,24 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-6">
-                        <img src="{{  asset('Assets/images/img_1.jpg') }}" class="img-fluid" alt="">
+                        <a class="image-link" href="{{  asset('Assets/images/img_1.jpg') }}">
+                            <img src="{{  asset('Assets/images/img_1.jpg') }}" class="img-fluid" alt="">
+                        </a>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
+                        <a class="image-link" href="{{  asset('Assets/images/img_2.jpg') }}">
                         <img src="{{  asset('Assets/images/img_2.jpg') }}" class="img-fluid" alt="">
+                        </a>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
+                        <a class="image-link">
                         <img src="{{  asset('Assets/images/img_3.jpg') }}" class="img-fluid" alt="">
+                        </a>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
-                        <img src="{{  asset('Assets/images/img_1.jpg') }}" class="img-fluid" alt="">
+                        <a class="image-link" href="{{  asset('Assets/images/img_2.jpg') }}">
+                        <img src="{{  asset('Assets/images/img_2.jpg') }}" class="img-fluid" alt="">
+                        </a>
                     </div>
                 </div>
             </div>

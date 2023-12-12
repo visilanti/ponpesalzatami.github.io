@@ -25,7 +25,7 @@
                     <h5 class="card-title">Photo Kegiatan</h5>
                     <p class="card-text">
                         Atur kelola photo kegiatan pesantren</p>
-                    <a href="#" class="btn btn-primary">Detail</a>
+                    <a href="{{ route('photo')}}" class="btn btn-primary">Detail</a>
                 </div>
             </div>
         </div>

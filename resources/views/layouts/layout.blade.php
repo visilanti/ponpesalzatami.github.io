@@ -17,7 +17,7 @@
         <!-- content -->
         @yield('content')
          <!-- footer -->
-         <section id="footer" class="bg-white">
+        <section id="footer" class="bg-white">
             <div class="container py-4">
                 <footer>
                     <div class="row">
@@ -75,6 +75,7 @@
                 </footer>
             </div>
         </section>
+
         <section class="bg-light border-top">
             <div class="container py-4">
                 <div class="d-flex justify-content-between">
@@ -107,18 +108,41 @@
                 }
             };
         </script>
-        
-        {{-- JQUERY --}}
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-            crossorigin="anonymous"></script>
+        <!-- animasi Aos -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        {{-- magnific --}}
+        <link rel="stylesheet" href="{{ asset('assets/css/magnific.css') }}">
+
+        <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- Magnific Popup core JS file -->
+        <script src="{{ asset('assets/js/magnific.js') }}"></script>
+
         {{-- Summernote JS --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.js"></script>
         <script>
+            $(document).ready(function(){
+                $('.image-link').magnificPopup({
+                    type: 'image',
+                    retina: {
+                        ratio: 1,
+                        replaceSrc: function(item, ratio){
+                            return item.src.replace(/\.\w+$/, function(m){
+                                return '@2x' + m;
+                            });
+                        }
+                    }
+                });
+            });
+
             $(document).ready(function() {
                         $('#summernote').summernote({
                             height: 200,
                         });
             });
+
+            AOS.init(); 
         </script>
     </body>
 </html>

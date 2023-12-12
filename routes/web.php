@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,17 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AppController::class, 'index']);
 
-Route::get('/berita', function () {
-    return view('berita.berita');
-});
+Route::get('/berita', [AppController::class, 'berita']);
 
-Route::get('/detail', function () {
-    return view('berita.detail');
-});
+Route::get('/detail/{slug}', [AppController::class, 'detail']);
 
 Route::get('/foto', function(){
     return view('foto.foto');
@@ -43,4 +39,9 @@ Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store')->middleware('auth');
 Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit')->middleware('auth');
 Route::post('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update')->middleware('auth');
-Route::post('/blog/destroy/{id}', [BlogController::class, 'destroy'])->name('blog.destroy')->middleware('auth');
+Route::get('/blog/destroy/{id}', [BlogController::class, 'destroy'])->name('blog.destroy')->middleware('auth');
+
+Route::get('/photo', [PhotoController::class, 'index'])->name('photo')->middleware('auth');
+Route::put('/photo/store/', [PhotoController::class, 'store'])->name('photo.store');
+Route::post('/photo/update/{id}', [PhotoController::class, 'update'])->name('photo.update')->middleware('auth');
+Route::get('/photo/destroy/{id}', [PhotoController::class, 'destroy'])->name('photo.destroy')->middleware('auth');
