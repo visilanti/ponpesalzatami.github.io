@@ -1,6 +1,5 @@
     @extends('layouts.layout')
-    @section('content')   
-        <!-- hero -->
+    @section('content')           <!-- hero -->
         <section id="hero" class="px-0">
             <div class="container text-center text-white">
                 <div class="hero-title">
@@ -160,13 +159,13 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
-                        <a class="image-link">
+                        <a class="image-link" href="{{  asset('Assets/images/img_3.jpg') }}">
                         <img src="{{  asset('Assets/images/img_3.jpg') }}" class="img-fluid" alt="">
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
-                        <a class="image-link" href="{{  asset('Assets/images/img_2.jpg') }}">
-                        <img src="{{  asset('Assets/images/img_2.jpg') }}" class="img-fluid" alt="">
+                        <a class="image-link" href="{{  asset('Assets/images/img_5.jpg') }}">
+                        <img src="{{  asset('Assets/images/img_5.jpg') }}" class="img-fluid" alt="">
                         </a>
                     </div>
                 </div>

@@ -13,7 +13,7 @@
                     <a class="nav-link active" aria-current="page" href="/">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Profil</a>
+                    <a class="nav-link active" aria-current="page" href="/detail/pondok-pesantren-al-zatami-profil-visi-dan-misi">Profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/berita">Berita</a>
